@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <h1>Welcome to the real world!</h1>
+  <main>
+    <RouterView></RouterView>
+  </main>
 </template>
 
 
