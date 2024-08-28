@@ -1,6 +1,5 @@
 <template>
-     <h1>Home page</h1>  
-     <RouterLink to="/projects" >Projects</RouterLink>
+        <h1>404 page not found</h1>
 </template>
     
 <script setup lang='ts'>

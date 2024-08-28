@@ -1,6 +1,6 @@
 <template>
-     <h1>Projects</h1>  
-     <RouterLink to="/" >Home</RouterLink>
+     <h1>Home page</h1>  
+     <RouterLink :to="{ name: '/projects/'}" >Projects</RouterLink>
 </template>
     
 <script setup lang='ts'>
