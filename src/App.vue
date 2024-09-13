@@ -1,13 +1,18 @@
 <script setup lang="ts">
-import { supabase } from '@/lib/supabaseClient'
-
-console.log(supabase)
+import AuthLayout from '@/components/Layout/main/AuthLayout.vue';
 </script>
 
 <template>
-  <main>
-    <RouterView></RouterView>
-  </main>
+  <AuthLayout>
+    <RouterView v-slot="{ Component, route}">
+      <Suspense v-if="Component" :timeout="0">
+        <Component :is="Component" :key="route.name"></Component>
+
+        <template #fallback>
+          <span>Loading ..</span>
+        </template>
+      
+      </Suspense>
+    </RouterView>
+  </AuthLayout>
 </template>
-
-
